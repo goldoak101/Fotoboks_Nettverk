@@ -48,7 +48,7 @@ create table Fotoboks(
 create table Produkt(
 	Produkt_ID int auto_increment,
 	Kategori_ID int,
-	pris decimal(6,2), -- maks pris 9999.99
+	pris decimal(6,2),
 	navn varchar(60) unique,
 	beskrivelse varchar(255),
 	primary key (Produkt_ID),
@@ -72,21 +72,26 @@ create table Sjekk(
 	foreign key (Fotoboks_ID) references Fotoboks(Fotoboks_ID),
 	foreign key (Inspektør_ID) references Inspektør(Inspektør_ID)
 );
-
+select * from kategori;
+-- før inført
 -- innføringsdata:
 
 insert into Kategori(navn, beskrivelse) values
 	("PortrettFoto", "Her kan du ta et Portrett foto"),
     ("Fotoremse", "Her kan du ta og lage Fotoremse, velg antall fotograper i remsa"),
     ("Foto", "Her kan du velge bilde størelser for bilderammer ");
-	
+
+select* from kategori;
+-- etter inført    
     
-    
+select* from Produkt;
+-- før inført
+ 
 insert into Produkt (pris, navn, beskrivelse, Kategori_ID) values
 -- fotoboks: Foto
-    (25.00, "Foto, stor", "Størrelse: 15 x 20cm", 1),
-	(15.00, "Foto, medium", "Størrelse: 13 x 18cm", 1),
-	(10.00, "Foto, liten", "Størrelse: 10 x 15cm", 1),
+    (25.00, "Foto - stor", "Størrelse: 15 x 20cm", 1),
+	(15.00, "Foto - medium", "Størrelse: 13 x 18cm", 1),
+	(10.00, "Foto - liten", "Størrelse: 10 x 15cm", 1),
     
 -- fotoboks: Fotoremser
 	(35.00, "Fotoremse, mange", "Antall: 1 x 9", 2),
@@ -97,7 +102,9 @@ insert into Produkt (pris, navn, beskrivelse, Kategori_ID) values
     (35.00, "PortrettFoto, IDkort", "Få ordnet et IDbilde som passer deg!", 3),
 	(25.00, "PortrettFoto, Passbilde", "Få ditt Passbilde påplass idag!", 3);
 	
-    
+select * from produkt;
+-- etter inført
+
 insert into Lokasjon(navn, x, y) values
 	("Stortinget", 59.913154, 10.739782),
 	("Oslo S", 59.911087, 10.752612),
@@ -121,9 +128,9 @@ insert into Inspektør(navn, lonnPerSjekk) values
     -- (kommentar: her kan det være like navn takket være "Inspektør_ID int auto_increment")
     
 insert into Sjekk(Fotoboks_ID, Inspektør_ID) values
-	(1,4),(1,2),(2,4),(2,4),(5,4),(2,1),
-	(1,2),(2,2),(6,6),(6,5),
-	(5,3),(3,2),(1,4);
+	(1,3),(1,4),(2,3),(2,5),(5,1),(2,3),
+	(1,2),(2,2),(6,4),(6,7),
+	(5,4),(3,2),(1,7);
     
 
 insert into Produkt_Innhold(Fotoboks_ID, Produkt_ID, antall) values
@@ -136,4 +143,5 @@ insert into Produkt_Innhold(Fotoboks_ID, Produkt_ID, antall) values
      
 	(3,5,15),(3,6,02),(3,7,6); 
     -- automat 3: hoved fokus på PortrettFoto 
+    
     
