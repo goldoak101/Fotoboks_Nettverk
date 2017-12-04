@@ -78,8 +78,8 @@ select * from kategori;
 
 insert into Kategori(navn, beskrivelse) values
 	("PortrettFoto", "Her kan du ta et Portrett foto"),
-    ("Fotoremse", "Her kan du ta og lage Fotoremse, velg antall fotograper i remsa"),
-    ("Foto", "Her kan du velge bilde størelser for bilderammer ");
+    	("Fotoremse", "Her kan du ta og lage Fotoremse, velg antall fotograper i remsa"),
+    	("Foto", "Her kan du velge bilde størelser for bilderammer ");
 
 select* from kategori;
 -- etter inført    
@@ -89,9 +89,9 @@ select* from Produkt;
  
 insert into Produkt (pris, navn, beskrivelse, Kategori_ID) values
 -- fotoboks: Foto
-    (25.00, "Foto - stor", "Størrelse: 15 x 20cm", 1),
-	(15.00, "Foto - medium", "Størrelse: 13 x 18cm", 1),
-	(10.00, "Foto - liten", "Størrelse: 10 x 15cm", 1),
+    	(25.00, "Foto - stor", "Størrelse: 15 x 20cm", 3),
+	(15.00, "Foto - medium", "Størrelse: 13 x 18cm", 3),
+	(10.00, "Foto - liten", "Størrelse: 10 x 15cm", 3),
     
 -- fotoboks: Fotoremser
 	(35.00, "Fotoremse, mange", "Antall: 1 x 9", 2),
@@ -99,8 +99,8 @@ insert into Produkt (pris, navn, beskrivelse, Kategori_ID) values
 	(15.00, "Fotoremse, få", "Antall: 1 x 3", 2),
 
 -- fotoboks: PortrettFoto
-    (35.00, "PortrettFoto, IDkort", "Få ordnet et IDbilde som passer deg!", 3),
-	(25.00, "PortrettFoto, Passbilde", "Få ditt Passbilde påplass idag!", 3);
+    	(35.00, "PortrettFoto, IDkort", "Få ordnet et IDbilde som passer deg!", 1),
+	(25.00, "PortrettFoto, Passbilde", "Få ditt Passbilde påplass idag!", 1);
 	
 select * from produkt;
 -- etter inført
