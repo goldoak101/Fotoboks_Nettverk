@@ -1,0 +1,16 @@
+Min Eksamensbesvarelse:
+
+Link for en total spilleliste for YouTube Videoer:
+
+Link:	https://www.youtube.com/watch?v=owNeDRSkWyI&list=PLubLz9eyg47k98Yl4G8DXDadGohZI5sgJ
+
+Liste over Videoer i rekkefølge:
+1.	SQL - Modelering - DB1100 #1
+2.	SQL - Normalisering - DB1100 #2
+3.	SQL- DB Script - DB1100 #3
+4.	SQL- Spørring: SELECT/FROM - DB1100 #4
+5.	SQL- Spørring: Join - DB1100 #5
+6.	SQL- Spørring: Matematiske operajsoner - DB1100 #6
+7.	SQL- Spørring: View - DB1100 #7
+8.	SQL- Spørring: Triggere - DB1100 #8
+9.	SQL- DB Bruker - DB1100 #9
